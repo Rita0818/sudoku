@@ -239,6 +239,11 @@ class GameManager {
     }
 
     setupEventListeners() {
+        // 难度选择事件
+        document.getElementById('difficulty').addEventListener('change', () => {
+            this.startNewGame();
+        });
+
         // 数字输入事件
         document.querySelector('.grid').addEventListener('click', (e) => {
             if (e.target.classList.contains('cell') && !e.target.classList.contains('fixed')) {
